@@ -1,0 +1,68 @@
+.section {
+  background: var(--color-section);
+  padding-block: var(--section-space);
+}
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "copy" "visual";
+  align-items: center;
+  gap: 40px;
+}
+.visual { grid-area: visual; min-width: 0; }
+.collection {
+  display: grid;
+  place-items: center;
+  padding-block: 10px;
+}
+.phone {
+  position: relative;
+  width: min(216px, 70vw);
+  aspect-ratio: 9 / 19;
+  padding: 6px;
+  border-radius: 34px;
+  background: #141c2c;
+  border: 1px solid rgb(255 255 255 / 45%);
+  box-shadow: 0 14px 30px rgb(0 0 0 / 18%), inset 0 0 0 2px rgb(255 255 255 / 10%);
+  transform: rotate(-3deg);
+}
+.phone::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  top: 24%;
+  width: 3px;
+  height: 45px;
+  border-radius: 0 2px 2px 0;
+  background: rgb(255 255 255 / 38%);
+}
+.screen {
+  position: relative;
+  height: 100%;
+  border-radius: 27px;
+  overflow: hidden;
+  background: var(--color-primary);
+}
+.camera { position: absolute; top: 12px; left: calc(50% - 4px); width: 8px; height: 8px; border-radius: 50%; background: #141c2c; }
+.splash { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 24px 12px; }
+.appLogo { display: inline-flex; align-items: center; gap: 5px; color: var(--color-white); font-size: 31px; font-weight: 600; line-height: 1.2; letter-spacing: -1.8px; white-space: nowrap; }
+.appLogo svg { width: 25px; height: 30px; flex-shrink: 0; }
+.appName { color: var(--color-muted); font-size: 12px; line-height: 1.5; margin-top: 18px; letter-spacing: .2px; text-align: center; }
+.gestureBar { position: absolute; bottom: 10px; left: 35%; width: 30%; height: 3px; border-radius: 3px; background: rgb(255 255 255 / 60%); }
+.caption { color: var(--color-muted); font-size: 11px; text-align: center; margin: 12px 0 0; }
+.copy { grid-area: copy; min-width: 0; max-width: 560px; }
+.title { font-size: clamp(32px, 3.5vw, 48px); line-height: 1.15; letter-spacing: -0.045em; font-weight: 500; text-wrap: balance; margin: 0 0 24px; }
+.description, .support { color: var(--color-muted); line-height: 1.75; margin: 0; }
+.description { font-size: 16px; }
+.support { font-size: 15px; margin-block: 18px 28px; }
+@media (min-width: 1024px) {
+  .layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "visual copy"; gap: clamp(48px, 6vw, 96px); }
+  .phone { width: 254px; border-radius: 39px; }
+  .screen { border-radius: 32px; }
+  .appLogo { font-size: 36px; }
+  .appLogo svg { width: 28px; height: 34px; }
+  .appName { font-size: 13px; }
+  .description { font-size: 17px; }
+  .support { font-size: 16px; }
+}
+

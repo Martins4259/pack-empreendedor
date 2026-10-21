@@ -1,0 +1,36 @@
+.action { display: none; }
+
+@media (min-width: 640px) {
+  .header:global(.site-header) { height: 80px; }
+  .header .inner { display: flex; align-items: center; gap: 32px; }
+  .header .nav { margin-left: auto; gap: 28px; font-size: 14px; }
+  .action { display: block; flex-shrink: 0; }
+  .action :global(.download-area) { position: relative; }
+  .action :global(.primary), .action :global(.primary:disabled) {
+    min-height: 44px;
+    padding: 12px 18px;
+    gap: 10px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-size: 12px;
+    line-height: 20px;
+    white-space: nowrap;
+    box-shadow: none;
+  }
+  .action :global(.primary:disabled) { opacity: .6; }
+  .action :global(.primary:not(:disabled):hover) { background: var(--color-section); }
+  .action :global(.download-status) {
+    position: absolute;
+    top: calc(100% + 3px);
+    left: 0;
+    right: 0;
+    margin: 0;
+    color: var(--color-secondary);
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
