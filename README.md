@@ -33,7 +33,7 @@ export const appDownload = {
 1. Receba o APK e confirme com o desenvolvedor sua origem, assinatura, integridade e autorização de distribuição. Teste a instalação e a abertura em um Android real compatível.
 2. Publique o APK preferencialmente no GitHub Releases do cliente. Copie o link HTTPS direto do arquivo, não o endereço da página do release. Qualquer URL externa HTTPS válida é aceita.
 3. Cole o link real entre as aspas de `apkUrl` e altere `enabled` para `true`. Gere uma nova build e publique a atualização do site para aplicar a configuração.
-4. Para desativar, altere `enabled` para `false`; você também pode esvaziar `apkUrl`. Gere uma nova build e atualize o site. Os quatro botões voltarão ao estado “Aplicativo em preparação.”.
+4. Para desativar, altere `enabled` para `false`; você também pode esvaziar `apkUrl`. Gere uma nova build e atualize o site. Os quatro botões voltarão ao estado “Download indisponível no momento.”.
 5. Para uma nova versão do APK, valide e publique o novo arquivo, substitua apenas `apkUrl` pelo novo link direto e atualize a build do site.
 
 A validação aceita somente endereços absolutos HTTPS sem credenciais. Ela não verifica a existência ou a segurança do APK nem realiza requisições durante a build. Os botões apontam diretamente ao endereço externo, sem assets locais, rotas, proxies ou redirecionamentos internos. As antigas variáveis de ambiente de download não são utilizadas.

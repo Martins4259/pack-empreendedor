@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return <LegalPage title="Política de privacidade">
     <section><h2>Responsável e abrangência</h2>
-      <p>Este documento trata do site e do futuro aplicativo Android Pack Empreendedor. A identificação do responsável pelo tratamento de dados, seus dados institucionais e o canal de privacidade estão pendentes de confirmação pelo cliente. A marca provisória Impulso não substitui essa identificação.</p>
+      <p>Este documento trata do site e do aplicativo Android Pack Empreendedor. A identificação do responsável pelo tratamento de dados, seus dados institucionais e o canal de privacidade estão pendentes de confirmação pelo cliente. A marca provisória Impulso não substitui essa identificação.</p>
     </section>
     <section><h2>Dados pessoais e finalidades</h2>
       <p>A landing page atual não apresenta formulário de cadastro obrigatório para o download. Isso não significa ausência de tratamento de dados no site, na infraestrutura de hospedagem, no distribuidor do arquivo ou no aplicativo.</p>
@@ -27,7 +27,7 @@ export default function PrivacyPage() {
       <p>O procedimento para receber e atender solicitações, com verificação adequada da identidade, deve ser confirmado pelo responsável. Consulte a <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm">Lei Geral de Proteção de Dados Pessoais</a>.</p>
     </section>
     <section><h2>Contato e atualização deste documento</h2>
-      <p>O canal de privacidade e a identificação do encarregado, quando aplicável, ainda não foram fornecidos. Cabe ao cliente disponibilizar um contato real e aprovar este documento após confirmar as práticas do site e do aplicativo com o desenvolvedor. Alterações relevantes deverão ser refletidas nesta página antes da distribuição.</p>
+      <p>O canal de privacidade e a identificação do encarregado, quando aplicável, ainda não foram fornecidos. Cabe ao cliente disponibilizar um contato real e aprovar este documento após confirmar as práticas do site e do aplicativo com o desenvolvedor. Alterações relevantes deverão ser refletidas nesta página sempre que houver mudanças no tratamento de dados.</p>
     </section>
   </LegalPage>;
 }

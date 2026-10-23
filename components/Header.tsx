@@ -4,7 +4,7 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import { DownloadButton } from "./DownloadButton";
 import styles from "./Header.module.css";
-const links = [{ href: "#inicio", label: "O aplicativo" }, { href: "#cursos", label: "Os cursos" }, { href: "#disponibilidade", label: "Disponibilidade" }];
+const links = [{ href: "#inicio", label: "O aplicativo" }, { href: "#cursos", label: "Os cursos" }];
 export function Header({ downloadUrl }: { downloadUrl: string | null }) {
   const [open, setOpen] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);

@@ -11,7 +11,7 @@ export function LegalPage({ title, children }: { title: string; children: ReactN
       <h1>{title}</h1>
       <aside className={styles.notice} aria-label="Situação do documento">
         <strong>Documento sujeito a confirmação e revisão jurídica</strong>
-        <p>As pendências abaixo precisam ser preenchidas pelo responsável pelo projeto e pelo desenvolvedor antes da disponibilização do aplicativo. Este texto não confirma práticas ainda não verificadas.</p>
+        <p>As pendências abaixo precisam ser preenchidas pelo responsável pelo projeto e pelo desenvolvedor para manter as informações do aplicativo atualizadas. Este texto não confirma práticas ainda não verificadas.</p>
       </aside>
       <div className={styles.content}>{children}</div>
       <nav className={styles.navigation} aria-label="Informações legais">

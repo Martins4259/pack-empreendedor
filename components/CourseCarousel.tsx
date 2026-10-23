@@ -39,7 +39,7 @@ export function CourseCarousel() {
           <button className="icon-button" aria-label="Próximo curso" onClick={() => api?.scrollNext()}><ArrowRight size={19} aria-hidden="true" /></button>
         </div></div>
       </div>
-      <div className="catalog-note"><p>O aplicativo está sendo preparado com 10 cursos. Nove temas já estão definidos; o décimo será anunciado.</p><p>As descrições são apresentações editoriais, e não ementas oficiais.</p></div>
+      <div className="catalog-note"><p>O aplicativo reúne 10 cursos sobre empreendedorismo e gestão.</p><p>As descrições são apresentações editoriais, e não ementas oficiais.</p></div>
     </div>
   </section>;
 }

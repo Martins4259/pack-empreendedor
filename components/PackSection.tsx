@@ -6,15 +6,13 @@ export function PackSection({ downloadUrl }: { downloadUrl: string | null }) {
   return (
     <section id="pacote" className={styles.section} aria-labelledby="pack-title">
       <div className={`container ${styles.layout}`}>
-        <div className={styles.visual} role="img" aria-label="Prévia ilustrativa de um smartphone Android com a marca Sebrae e o nome Pack Empreendedor na tela">
+        <div className={styles.visual} role="img" aria-label="Representação ilustrativa de um smartphone Android com a marca Sebrae na tela">
           <div className={styles.collection} aria-hidden="true">
             <div className={styles.phone}>
               <div className={styles.screen}>
                 <span className={styles.camera} />
                 <div className={styles.splash}>
-                  <div className={styles.appLogo}><Image src="/images/logo-oficial.png" alt="" width={640} height={312} sizes="(min-width: 1024px) 160px, 136px" /></div>
-                  <span className={styles.appName}>Pack Empreendedor</span>
-                </div>
+                  <div className={styles.appLogo}><Image src="/images/logo-oficial.png" alt="" width={640} height={312} sizes="(min-width: 1024px) 160px, 136px" /></div>                </div>
                 <span className={styles.gestureBar} />
               </div>
             </div>
@@ -23,7 +21,7 @@ export function PackSection({ downloadUrl }: { downloadUrl: string | null }) {
         </div>
         <div className={styles.copy}>
           <h2 id="pack-title" className={styles.title}>Conhecimento para fazer seu negócio crescer</h2>
-          <p className={styles.description}>Desenvolva habilidades importantes para o dia a dia da sua empresa. Com o Pack Empreendedor, você encontra cursos gratuitos sobre gestão, organização financeira, marketing e atendimento em um só aplicativo.</p>
+          <p className={styles.description}>Desenvolva habilidades importantes para o dia a dia da sua empresa. Com o Sebrae, você encontra cursos gratuitos sobre gestão, organização financeira, marketing e atendimento em um só aplicativo.</p>
           <p className={styles.support}>Tudo organizado para você aprender no seu ritmo, diretamente pelo celular.</p>
           <DownloadButton url={downloadUrl} statusId="pack-download-status" />
         </div>

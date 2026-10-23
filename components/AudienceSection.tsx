@@ -10,7 +10,7 @@ export function AudienceSection() {
             Conhecimento para quem quer ir mais longe
           </h2>
           <p className={styles.lead}>
-            Se você está começando a empreender ou já tem uma empresa, o Pack Empreendedor ajuda você a encontrar conhecimentos importantes para administrar melhor seu negócio.
+            Se você está começando a empreender ou já tem uma empresa, Sebrae ajuda você a encontrar conhecimentos importantes para administrar melhor seu negócio.
           </p>
           <p className={styles.support}>
             Aprenda sobre finanças, marketing, atendimento e desenvolvimento profissional, de forma organizada e no seu ritmo.

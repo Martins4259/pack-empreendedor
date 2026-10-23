@@ -13,10 +13,10 @@ export default function TermsPage() {
     </section>
     <section><h2>Finalidade educacional</h2>
       <p>O projeto apresenta um aplicativo Android gratuito com conteúdos sobre empreendedorismo e gestão. Os materiais têm finalidade educacional. Não há promessa de resultados comerciais, renda, certificação ou atendimento especializado.</p>
-      <p>O aplicativo e suas condições técnicas definitivas dependem da entrega e validação pelo desenvolvedor. A distribuição permanece em preparação enquanto não houver APK validado e habilitação do download.</p>
+      <p>O aplicativo Android está disponível. Consulte as instruções de instalação e as condições técnicas correspondentes à versão distribuída.</p>
     </section>
     <section><h2>Condições de utilização</h2>
-      <p>O acesso anunciado é gratuito e sem cadastro obrigatório. Antes da distribuição, o cliente e o desenvolvedor devem confirmar compatibilidade Android, permissões solicitadas e instruções de instalação e acesso aos conteúdos.</p>
+      <p>O acesso anunciado é gratuito e sem cadastro obrigatório. O cliente e o desenvolvedor devem manter atualizadas as informações sobre compatibilidade Android, permissões solicitadas e instruções de instalação e acesso aos conteúdos.</p>
       <p>A utilização deve respeitar a legislação e os direitos de terceiros. As condições de acesso, reprodução e uso dos materiais devem ser informadas conforme suas licenças reais; o acesso gratuito não implica autorização irrestrita de cópia ou redistribuição.</p>
     </section>
     <section><h2>Direitos autorais e licenciamento</h2>

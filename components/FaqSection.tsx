@@ -5,11 +5,11 @@ import { Plus } from "lucide-react";
 import styles from "./ClosingSections.module.css";
 
 const questions = [
-  { question: "O aplicativo é realmente gratuito?", answer: "Sim. O Pack Empreendedor será disponibilizado gratuitamente para dispositivos Android." },
-  { question: "Preciso fazer cadastro?", answer: "Não. O acesso inicial ao aplicativo não exigirá cadastro obrigatório." },
-  { question: "Quais cursos estarão disponíveis?", answer: "O aplicativo reunirá conteúdos sobre empreendedorismo, gestão financeira, marketing, atendimento e desenvolvimento profissional." },
+  { question: "O aplicativo é realmente gratuito?", answer: "Sim. O Pack Empreendedor está disponível gratuitamente para dispositivos Android." },
+  { question: "Preciso fazer cadastro?", answer: "Não. O acesso inicial ao aplicativo não exige cadastro obrigatório." },
+  { question: "Quais cursos estão disponíveis?", answer: "O aplicativo reúne conteúdos sobre empreendedorismo, gestão financeira, marketing, atendimento e desenvolvimento profissional." },
   { question: "Como faço para instalar o aplicativo?", answer: "Após baixar o APK, abra o arquivo no seu celular Android e siga as instruções de instalação. O dispositivo poderá solicitar autorização para instalar aplicativos dessa origem." },
-  { question: "O aplicativo funciona no iPhone?", answer: "Esta versão será destinada a dispositivos Android. Ainda não há uma versão disponível para iPhone." },
+  { question: "O aplicativo funciona no iPhone?", answer: "Esta versão é destinada a dispositivos Android. Não há uma versão disponível para iPhone." },
   { question: "Os cursos oferecem certificado?", answer: "As condições de certificação dependem de cada curso. Consulte as informações correspondentes antes de considerar a emissão de certificados." },
 ];
 
