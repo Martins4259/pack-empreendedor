@@ -4,6 +4,6 @@
 .panel a{text-decoration:underline;text-underline-offset:3px}
 .actions{display:flex;flex-wrap:wrap;gap:12px}
 .actions button{min-height:44px;padding:10px 16px;border:1px solid var(--color-primary);border-radius:8px;background:var(--color-white);color:var(--color-heading);font-weight:500}
-.preferences{position:fixed;right:16px;bottom:12px;z-index:35;max-width:calc(100% - 32px);min-height:44px;padding:10px 14px;border:1px solid var(--color-muted);border-radius:8px;background:var(--color-section);color:var(--color-white);font-size:12px}
+.selection{font-weight:600;color:var(--color-heading)!important}
 .panel :focus-visible{outline-color:var(--color-primary)}
 @media(max-width:639px){.panel{padding:18px;max-height:calc(100dvh - 32px);overflow-y:auto}.actions button{flex:1 1 auto}}

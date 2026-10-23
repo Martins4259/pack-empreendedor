@@ -30,6 +30,8 @@
 .footerHeading { font-size: 16px; line-height: 1.5; font-weight: 500; letter-spacing: 0; margin: 0 0 14px; }
 .footerLinks, .legalLinks { list-style: none; margin: 0; padding: 0; }
 .footerLinks a, .legalLinks a, .contact { display: inline-flex; align-items: center; min-height: 44px; padding-block: 10px; font-size: 15px; line-height: 1.6; color: var(--color-muted); overflow-wrap: anywhere; }
+.cookieSettings { display:inline-flex;align-items:center;min-height:44px;padding:10px 0;border:0;background:none;color:var(--color-muted);font-size:15px;line-height:1.6;text-align:left; }
+.cookieSettings:hover { text-decoration:underline;text-underline-offset:5px; }
 .footer a:hover { text-decoration: underline; text-underline-offset: 5px; }
 .pending { font-size: 15px; line-height: 1.8; color: var(--color-muted); margin: 0; }
 .legalHeading { margin-top: 28px; }

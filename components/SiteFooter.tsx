@@ -1,3 +1,4 @@
+import { CookieSettingsButton } from "./CookieSettingsButton";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import styles from "./ClosingSections.module.css";
@@ -36,6 +37,7 @@ export function SiteFooter({ contact, privacyUrl, termsUrl }: FooterProps) {
             <ul className={styles.legalLinks}>
               <li>{privacyUrl ? <a href={privacyUrl}>Política de privacidade</a> : <span>Política de privacidade<small>Em preparação</small></span>}</li>
               <li>{termsUrl ? <a href={termsUrl}>Termos de uso</a> : <span>Termos de uso<small>Em preparação</small></span>}</li>
+              <li><CookieSettingsButton className={styles.cookieSettings} /></li>
             </ul>
           </div>
         </div>

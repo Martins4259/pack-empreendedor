@@ -1,6 +1,8 @@
 export const META_PIXEL_ID = "1469158415094350";
 export const MARKETING_CONSENT_KEY = "pack-marketing-consent-v1";
 export type MarketingConsent = "granted" | "denied" | null;
+export const META_PIXEL_READY_EVENT = "pack:meta-pixel-ready";
+export const MARKETING_PREFERENCES_EVENT = "pack:marketing-preferences";
 const consentEvent = "pack:marketing-consent";
 
 declare global {
@@ -99,4 +101,5 @@ export const META_PIXEL_BOOTSTRAP = `
   fbq('set', 'autoConfig', false, '${META_PIXEL_ID}');
   fbq('init', '${META_PIXEL_ID}');
   window.__packMetaInitialized = true;
+  window.dispatchEvent(new Event('${META_PIXEL_READY_EVENT}'));
 })();`;
