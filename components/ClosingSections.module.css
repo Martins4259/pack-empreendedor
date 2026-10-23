@@ -24,7 +24,8 @@
 .ctaButton :global(:focus-visible) { outline-color: var(--color-heading); }
 .footer { background: var(--color-section); padding-block: 0 24px; }
 .footerGrid { border-top: 1px solid rgb(255 255 255 / 24%); padding-block: 44px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 36px; }
-.brand { display: inline-block; font-size: 32px; line-height: 1.3; letter-spacing: -1.5px; font-weight: 600; }
+.brand { display: inline-flex; padding: 10px 14px; background: var(--color-white); border-radius: 8px; }
+.footerLogo { display: block; width: 120px; height: auto; }
 .identity p { font-size: 15px; line-height: 1.8; color: var(--color-muted); margin: 18px 0 0; max-width: 340px; }
 .footerHeading { font-size: 16px; line-height: 1.5; font-weight: 500; letter-spacing: 0; margin: 0 0 14px; }
 .footerLinks, .legalLinks { list-style: none; margin: 0; padding: 0; }

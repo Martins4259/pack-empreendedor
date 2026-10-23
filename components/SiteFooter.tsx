@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import styles from "./ClosingSections.module.css";
 
 type FooterProps = {
@@ -21,7 +22,7 @@ export function SiteFooter({ contact, privacyUrl, termsUrl }: FooterProps) {
       <div className="container">
         <div className={styles.footerGrid}>
           <div className={styles.identity}>
-            <a href="#inicio" className={styles.brand} aria-label="Impulso, início">impulso.</a>
+            <a href="#inicio" className={styles.brand} aria-label="Sebrae, início"><Image src="/images/logo-oficial.png" alt="Sebrae" width={640} height={312} sizes="120px" className={styles.footerLogo} /></a>
             <p>Pack Empreendedor. Aplicativo gratuito para Android com conteúdos sobre empreendedorismo e gestão para desenvolver seu negócio.</p>
           </div>
           <nav aria-label="Navegação do rodapé">

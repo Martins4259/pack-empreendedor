@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { ArrowUpRight, Menu, X, MoveUpRight } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
+import Image from "next/image";
 import { DownloadButton } from "./DownloadButton";
 import styles from "./Header.module.css";
 const links = [{ href: "#inicio", label: "O aplicativo" }, { href: "#cursos", label: "Os cursos" }, { href: "#disponibilidade", label: "Disponibilidade" }];
@@ -15,7 +16,7 @@ export function Header({ downloadUrl }: { downloadUrl: string | null }) {
   return <header className={`site-header ${styles.header}`}>
     <div className={`header-inner ${styles.inner}`}>
       <button ref={trigger} className="icon-button menu-trigger" aria-label="Abrir navegação" aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen(true)}><Menu aria-hidden="true" /></button>
-      <a className="brand" href="#inicio" aria-label="Impulso, início"><MoveUpRight aria-hidden="true" strokeWidth={3} /><span>impulso<span className="brand-dot">.</span></span></a>
+      <a className={`brand ${styles.brand}`} href="#inicio" aria-label="Sebrae, início"><Image src="/images/logo-oficial.png" alt="Sebrae" width={640} height={312} priority sizes="(max-width: 639px) 100px, 112px" className={styles.logo} /></a>
       <nav className={`desktop-nav ${styles.nav}`} aria-label="Navegação principal">{links.slice(0, 2).map(link => <a key={link.href} href={link.href}>{link.label}</a>)}</nav>
       <div className={styles.action}><DownloadButton url={downloadUrl} statusId="header-download-status" compact /></div>
     </div>

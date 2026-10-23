@@ -1,6 +1,9 @@
 .action { display: none; }
+.brand { justify-self: center; flex-shrink: 0; }
+.logo { display: block; width: 100px; height: auto; }
 
 @media (min-width: 640px) {
+  .logo { width: 112px; }
   .header:global(.site-header) { height: 80px; }
   .header .inner { display: flex; align-items: center; gap: 32px; }
   .header .nav { margin-left: auto; gap: 28px; font-size: 14px; }
