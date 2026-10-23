@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
+import { MetaPixel } from "@/components/MetaPixel";
 import "@fontsource/inter/400.css";
 import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" }
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="pt-BR"><body>{children}</body></html>;
+  return <html lang="pt-BR"><body>{children}<Suspense fallback={null}><MetaPixel /></Suspense></body></html>;
 }
 
 

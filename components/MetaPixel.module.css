@@ -1,0 +1,9 @@
+.panel{position:fixed;z-index:40;bottom:16px;left:var(--gutter);right:var(--gutter);max-width:680px;margin-inline:auto;padding:22px;border:1px solid var(--color-muted);border-radius:12px;background:var(--color-white);color:var(--color-heading)}
+.panel h2{font-size:20px;letter-spacing:-.4px;line-height:1.4}
+.panel p{font-size:14px;line-height:1.7;margin:12px 0 16px;color:var(--color-secondary)}
+.panel a{text-decoration:underline;text-underline-offset:3px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.actions button{min-height:44px;padding:10px 16px;border:1px solid var(--color-primary);border-radius:8px;background:var(--color-white);color:var(--color-heading);font-weight:500}
+.preferences{position:fixed;right:16px;bottom:12px;z-index:35;max-width:calc(100% - 32px);min-height:44px;padding:10px 14px;border:1px solid var(--color-muted);border-radius:8px;background:var(--color-section);color:var(--color-white);font-size:12px}
+.panel :focus-visible{outline-color:var(--color-primary)}
+@media(max-width:639px){.panel{padding:18px;max-height:calc(100dvh - 32px);overflow-y:auto}.actions button{flex:1 1 auto}}
