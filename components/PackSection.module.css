@@ -45,8 +45,8 @@
 }
 .camera { position: absolute; top: 12px; left: calc(50% - 4px); width: 8px; height: 8px; border-radius: 50%; background: #141c2c; }
 .splash { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 24px 12px; }
-.appLogo { display: inline-flex; align-items: center; gap: 5px; color: var(--color-white); font-size: 31px; font-weight: 600; line-height: 1.2; letter-spacing: -1.8px; white-space: nowrap; }
-.appLogo svg { width: 25px; height: 30px; flex-shrink: 0; }
+.appLogo { display: inline-flex; align-items: center; padding: 12px; background: var(--color-white); border-radius: 8px; }
+.appLogo img { display: block; width: 136px; max-width: 100%; height: auto; }
 .appName { color: var(--color-muted); font-size: 12px; line-height: 1.5; margin-top: 18px; letter-spacing: .2px; text-align: center; }
 .gestureBar { position: absolute; bottom: 10px; left: 35%; width: 30%; height: 3px; border-radius: 3px; background: rgb(255 255 255 / 60%); }
 .caption { color: var(--color-muted); font-size: 11px; text-align: center; margin: 12px 0 0; }
@@ -59,8 +59,7 @@
   .layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "visual copy"; gap: clamp(48px, 6vw, 96px); }
   .phone { width: 254px; border-radius: 39px; }
   .screen { border-radius: 32px; }
-  .appLogo { font-size: 36px; }
-  .appLogo svg { width: 28px; height: 34px; }
+  .appLogo img { width: 160px; }
   .appName { font-size: 13px; }
   .description { font-size: 17px; }
   .support { font-size: 16px; }

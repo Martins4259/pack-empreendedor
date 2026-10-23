@@ -1,18 +1,18 @@
 import { DownloadButton } from "./DownloadButton";
-import { MoveUpRight } from "lucide-react";
+import Image from "next/image";
 import styles from "./PackSection.module.css";
 
 export function PackSection({ downloadUrl }: { downloadUrl: string | null }) {
   return (
     <section id="pacote" className={styles.section} aria-labelledby="pack-title">
       <div className={`container ${styles.layout}`}>
-        <div className={styles.visual} role="img" aria-label="Prévia ilustrativa de um smartphone Android com a marca Impulso e o nome Pack Empreendedor na tela">
+        <div className={styles.visual} role="img" aria-label="Prévia ilustrativa de um smartphone Android com a marca Sebrae e o nome Pack Empreendedor na tela">
           <div className={styles.collection} aria-hidden="true">
             <div className={styles.phone}>
               <div className={styles.screen}>
                 <span className={styles.camera} />
                 <div className={styles.splash}>
-                  <div className={styles.appLogo}><MoveUpRight strokeWidth={3} /><span>impulso<span>.</span></span></div>
+                  <div className={styles.appLogo}><Image src="/images/logo-oficial.png" alt="" width={640} height={312} sizes="(min-width: 1024px) 160px, 136px" /></div>
                   <span className={styles.appName}>Pack Empreendedor</span>
                 </div>
                 <span className={styles.gestureBar} />
