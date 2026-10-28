@@ -2,7 +2,7 @@ import { DownloadButton } from "./DownloadButton";
 import Image from "next/image";
 import styles from "./PackSection.module.css";
 
-export function PackSection({ downloadUrl }: { downloadUrl: string | null }) {
+export function PackSection({ downloadUrl, showDownload = true }: { downloadUrl: string | null; showDownload?: boolean }) {
   return (
     <section id="pacote" className={styles.section} aria-labelledby="pack-title">
       <div className={`container ${styles.layout}`}>
@@ -23,7 +23,7 @@ export function PackSection({ downloadUrl }: { downloadUrl: string | null }) {
           <h2 id="pack-title" className={styles.title}>Conhecimento para fazer seu negócio crescer</h2>
           <p className={styles.description}>Desenvolva habilidades importantes para o dia a dia da sua empresa. Com o Sebrae, você encontra cursos gratuitos sobre gestão, organização financeira, marketing e atendimento em um só aplicativo.</p>
           <p className={styles.support}>Tudo organizado para você aprender no seu ritmo, diretamente pelo celular.</p>
-          <DownloadButton url={downloadUrl} statusId="pack-download-status" />
+          {showDownload && <DownloadButton url={downloadUrl} statusId="pack-download-status" />}
         </div>
       </div>
     </section>

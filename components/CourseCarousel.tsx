@@ -5,7 +5,7 @@ import AutoScroll from "embla-carousel-auto-scroll";
 import { ArrowLeft, ArrowRight, Pause, Play, MoveRight } from "lucide-react";
 import { courses } from "@/data/courses";
 import { CourseCard } from "./CourseCard";
-export function CourseCarousel() {
+export function CourseCarousel({ informational = false }: { informational?: boolean }) {
   const [paused, setPaused] = useState(false);
   const [reduced, setReduced] = useState(true);
   const hovered = useRef(false);
@@ -30,8 +30,8 @@ export function CourseCarousel() {
   }, [api, paused, reduced, resume]);
   return <section id="cursos" className="courses-section" aria-labelledby="courses-title">
     <div className="container">
-      <div className="section-top"><div><p className="eyebrow">CONHECIMENTO QUE VIRA PRÁTICA</p><h2 id="courses-title">Conheça os cursos<br className="desktop-break" /> que estarão no aplicativo</h2></div><p className="section-description">Conteúdos gratuitos que você poderá acessar pelo aplicativo para empreender, desenvolver novas habilidades e fazer seu negócio crescer.</p></div>
-      <div className="carousel" role="region" aria-roledescription="carrossel" aria-label="Cursos do aplicativo Pack Empreendedor" onMouseEnter={() => { hovered.current = true; api?.plugins().autoScroll?.stop(); }} onMouseLeave={() => { hovered.current = false; resume(); }} onFocusCapture={() => { focused.current = true; api?.plugins().autoScroll?.stop(); }} onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) { focused.current = false; resume(); } }}>
+      <div className="section-top"><div><p className="eyebrow">CONHECIMENTO QUE VIRA PRÁTICA</p><h2 id="courses-title">{informational ? "Conheça temas para desenvolver seu negócio" : <>Conheça os cursos<br className="desktop-break" /> que estarão no aplicativo</>}</h2></div><p className="section-description">{informational ? "Explore os temas e consulte os conteúdos diretamente no site oficial do Sebrae Goiás." : "Conteúdos gratuitos que você poderá acessar pelo aplicativo para empreender, desenvolver novas habilidades e fazer seu negócio crescer."}</p></div>
+      <div className="carousel" role="region" aria-roledescription="carrossel" aria-label={informational ? "Temas sobre empreendedorismo" : "Cursos do aplicativo Pack Empreendedor"} onMouseEnter={() => { hovered.current = true; api?.plugins().autoScroll?.stop(); }} onMouseLeave={() => { hovered.current = false; resume(); }} onFocusCapture={() => { focused.current = true; api?.plugins().autoScroll?.stop(); }} onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) { focused.current = false; resume(); } }}>
         <div className="carousel-viewport" ref={ref}><div className="carousel-track">{courses.map(course => <div className="carousel-slide" key={course.slug}><CourseCard course={course} /></div>)}</div></div>
         <div className="carousel-bottom"><p className="swipe-hint">Explore os temas <MoveRight size={20} aria-hidden="true" /></p><div className="carousel-controls">
           <button className="icon-button" aria-label="Curso anterior" onClick={() => api?.scrollPrev()}><ArrowLeft size={19} aria-hidden="true" /></button>
@@ -39,7 +39,7 @@ export function CourseCarousel() {
           <button className="icon-button" aria-label="Próximo curso" onClick={() => api?.scrollNext()}><ArrowRight size={19} aria-hidden="true" /></button>
         </div></div>
       </div>
-      <div className="catalog-note"><p>O aplicativo reúne 10 cursos sobre empreendedorismo e gestão.</p><p>As descrições são apresentações editoriais, e não ementas oficiais.</p></div>
+      <div className="catalog-note"><p>{informational ? "Os temas apresentados são informativos. Consulte a disponibilidade e as condições dos conteúdos no site oficial." : "O aplicativo reúne 10 cursos sobre empreendedorismo e gestão."}</p><p>As descrições são apresentações editoriais, e não ementas oficiais.</p></div>
     </div>
   </section>;
 }

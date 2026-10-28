@@ -5,7 +5,8 @@ import Image from "next/image";
 import { DownloadButton } from "./DownloadButton";
 import styles from "./Header.module.css";
 const links = [{ href: "#inicio", label: "O aplicativo" }, { href: "#cursos", label: "Os cursos" }];
-export function Header({ downloadUrl }: { downloadUrl: string | null }) {
+export function Header({ downloadUrl, showDownload = true, informational = false }: { downloadUrl: string | null; showDownload?: boolean; informational?: boolean }) {
+  const navigationLinks = informational ? links.map(link => link.href === "#inicio" ? { ...link, label: "Início" } : link) : links;
   const [open, setOpen] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
@@ -17,8 +18,8 @@ export function Header({ downloadUrl }: { downloadUrl: string | null }) {
     <div className={`header-inner ${styles.inner}`}>
       <button ref={trigger} className="icon-button menu-trigger" aria-label="Abrir navegação" aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen(true)}><Menu aria-hidden="true" /></button>
       <a className={`brand ${styles.brand}`} href="#inicio" aria-label="Sebrae, início"><Image src="/images/logo-oficial.png" alt="Sebrae" width={640} height={312} priority sizes="(max-width: 639px) 100px, 112px" className={styles.logo} /></a>
-      <nav className={`desktop-nav ${styles.nav}`} aria-label="Navegação principal">{links.slice(0, 2).map(link => <a key={link.href} href={link.href}>{link.label}</a>)}</nav>
-      <div className={styles.action}><DownloadButton url={downloadUrl} statusId="header-download-status" compact /></div>
+      <nav className={`desktop-nav ${styles.nav}`} aria-label="Navegação principal">{navigationLinks.slice(0, 2).map(link => <a key={link.href} href={link.href}>{link.label}</a>)}</nav>
+      {showDownload && <div className={styles.action}><DownloadButton url={downloadUrl} statusId="header-download-status" compact /></div>}
     </div>
     <dialog ref={dialog} id="mobile-navigation" className="mobile-dialog" aria-labelledby="navigation-title" onKeyDown={event => {
         if (event.key !== "Tab") return;
@@ -29,7 +30,7 @@ export function Header({ downloadUrl }: { downloadUrl: string | null }) {
         else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
       }} onCancel={() => setOpen(false)} onClose={() => { setOpen(false); trigger.current?.focus(); }} onClick={event => { if (event.target === event.currentTarget) setOpen(false); }}>
       <div className="dialog-heading"><span id="navigation-title">Navegação</span><button autoFocus className="icon-button" aria-label="Fechar navegação" onClick={() => setOpen(false)}><X aria-hidden="true" /></button></div>
-      <nav aria-label="Navegação mobile">{links.map(link => <a key={link.href} href={link.href} onClick={() => setOpen(false)}>{link.label}<ArrowUpRight size={18} aria-hidden="true" /></a>)}</nav>
+      <nav aria-label="Navegação mobile">{navigationLinks.map(link => <a key={link.href} href={link.href} onClick={() => setOpen(false)}>{link.label}<ArrowUpRight size={18} aria-hidden="true" /></a>)}</nav>
     </dialog>
   </header>;
 }
